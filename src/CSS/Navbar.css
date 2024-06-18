@@ -1,21 +1,52 @@
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #282c34;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+p {
+  color: white;
+}
+
 nav ul li {
   display: inline;
-  background-color: gray;
-  padding: 12px;
-  transition: background 0.3, border-radius 0.3s;
 }
 
-nav ul li:hover {
-  background-color: #ded;
-  transition: background 0.3, border-radius 0.3s;
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
 }
 
-a {
-  color: #ded;
-  transition: background 0.3, border-radius 0.3s;
+.login-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.3s, border-radius 0.3s;
 }
 
-a:hover {
-  color: brown;
-  transition: background 0.3, border-radius 0.3s;
+input[type="text"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: background 0.3s, border-radius 0.3s;
+}
+
+.error-message {
+  color: red;
+  animation: flashError 0.1s ease-in-out;
+}
+
+/* Makes the error message fade in */
+@keyframes flashError {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
