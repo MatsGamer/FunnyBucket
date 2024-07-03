@@ -31,7 +31,7 @@ function Navbar() {
         </li>
         {userName ? ( // Only shows if logged in
           <>
-            <p>Welcome {userName}</p>
+            <p>Welcome {userName}!</p>
             <li>
               <NavLink to="/favorites">Favorites</NavLink>
             </li>
