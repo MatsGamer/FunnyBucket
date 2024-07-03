@@ -35,21 +35,47 @@ p {
 }
 
 button {
-  background-color: #21a1f1;
+  padding: 0.5rem 1rem;
   border: none;
-  border-radius: 5px;
-  color: white;
-  padding: 10px 20px;
+  border-radius: 4px;
+  background-color: #61dafb;
+  color: #282c34;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
-  margin-top: 20px;
+  transition: background 0.3s, transform 0.3s;
 }
 
-button:hover {
-  background-color: #61dafb;
+button:hover,
+button:focus {
+  background-color: #21a1f1;
+  transform: scale(1.05);
 }
 
 button:active {
   transform: scale(0.98);
+}
+
+/* Joke details container */
+.joke-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.joke-detail-category,
+.joke-detail-id {
+  border: 1px solid #ccc;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  background-color: #282c34;
+  color: white;
+  font-size: 0.875rem;
+}
+
+.joke-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
 }

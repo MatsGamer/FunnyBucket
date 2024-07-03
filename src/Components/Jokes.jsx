@@ -32,12 +32,14 @@ function Jokes({ isNSFW }) {
         <p>{currentJoke.joke}</p>
         <p>{currentJoke.setup}</p>
         <p>{currentJoke.delivery}</p>
-        <p>Category: {currentJoke.category}</p>
-        <p>ID: {currentJoke.id}</p>
       </div>
       <button id="getJoke-btn" onClick={handleNewJoke}>
         Get new Joke
       </button>
+        <div className="joke-details">
+        <div className="joke-detail-category">{currentJoke.category}</div>
+        <div className="joke-detail-id">ID: {currentJoke.id}</div>
+        </div>
     </>
   );
 }

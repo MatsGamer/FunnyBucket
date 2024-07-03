@@ -1,13 +1,28 @@
+/* Navbar styling */
 nav {
   position: sticky;
   top: 0;
   background-color: #282c34;
   padding: 1rem;
   z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-p {
+nav p {
   color: white;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
 }
 
 nav ul li {
@@ -22,6 +37,13 @@ nav ul li a {
   transition: background 0.3s, color 0.3s, transform 0.3s;
 }
 
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: #61dafb;
+  color: #282c34;
+  transform: scale(1.05);
+}
+
 .login-container {
   display: flex;
   align-items: center;
@@ -29,24 +51,50 @@ nav ul li a {
   transition: background 0.3s, border-radius 0.3s;
 }
 
-input[type="text"] {
+nav input[type="text"] {
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 4px;
   transition: background 0.3s, border-radius 0.3s;
+  font-size: 1rem;
+}
+
+nav input[type="text"]:focus {
+  border-color: #61dafb;
+  background-color: #f0f8ff;
+}
+
+nav button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #61dafb;
+  color: #282c34;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+nav button:hover,
+nav button:focus {
+  background-color: #21a1f1;
+  transform: scale(1.05);
 }
 
 .error-message {
   color: red;
-  animation: flashError 0.1s ease-in-out;
+  font-size: 0.9rem;
+  animation: flashError 0.3s ease-in-out;
 }
 
 /* Makes the error message fade in */
 @keyframes flashError {
   0% {
     opacity: 0;
+    transform: translateY(-10px);
   }
   100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
